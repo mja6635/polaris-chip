@@ -16,27 +16,96 @@
       font-family: sans-serif;
       background-color: #ededed;
     }
+
     polaris-chip {
       margin: 16px;
     }
+
+    my-card.cat {
+      --my-card-change-bg: orange ;
+    }
+    my-card.king {
+      --my-card-change-bg: purple ;
+      --my-card-change-hover: gold;
+    }
+    my-card.tuah {
+      --my-card-change-bg: crimson  ;
+      --my-card-change-hover: gold;
+    }
+    my-card.wordle {
+      --my-card-change-bg: green  ;
+    }
+
+    my-card.states {
+      --my-card-change-bg: grey;
+    }
+
+    .awesome-button {
+        padding: 8px 25px;
+        background-color: navy;
+        color: grey;
+        border-radius: 10px;
+      }
   </style>
   <title>polaris-chip / my-card</title>
 </head>
 
 <body>
-  <h1>polaris-chip</h1>
-  <!-- this is going to do whatever the tag's defaults are -->
-  <polaris-chip title="News of Record" link="https://psu.edu/" shiny></polaris-chip>
-  <polaris-chip title="Faculty and Staff" link="https://hax.psu.edu"></polaris-chip>
-  <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
-  <polaris-chip title="Grants and donations"></polaris-chip>
+  <div class="control-wrapper">
+    <button class="duplicate">Clone Card</button>
+    <button id="bg-change">Change background</button>
+    <button id="change-image">Change image</button>
+    <button id="change-title">Change title</button>
+    <button id="delete-card">Delete card</button>
+  </div>
 
-  <h1>my-card</h1>
-  <my-card></my-card>
 
+  <div class="my-card"> 
+    <my-card fancy image="https://upload.wikimedia.org/wikipedia/commons/1/10/Cat_with_cute_eyes.jpeg" 
+    title="This is my cat"
+    line="Not only is this not my cat but this cat also hates codepen"
+    link="https://hax.psu.edu"
+    buttonTitle="click this for HAX">
+    <p slot="cat"> This cat is awesome</p>
+      </my-card>
+     
+  
+
+  <my-card fancy class="king"
+  image="https://deadline.com/wp-content/uploads/2022/08/Lebron-James.jpg?w=1000"
+  title="My Glorious King"
+  line= "If he tells me to jump, I say, How High"
+  link="https://allpoetry.com/poem/17718975-My-glorious-king--by-Lebronjames"
+  buttonTitle="Please Read">
+  </my-card>
+
+
+  <my-card fancy class="tuah"
+  image="https://helios-i.mashable.com/imagery/articles/00crJ2ChE95JN4zloBxW5Sn/hero-image.fill.size_1200x675.v1719433368.png"
+  title="Is this the greatest moment in history?"
+  line="Why does she have a podcast"
+  link="https://www.youtube.com/@TalkTuahPod"
+  buttonTitle="Listen to it here">
+  </my-card>
+
+  <my-card fancy class="wordle"
+  image="https://www.nytimes.com/games-assets/v2/assets/wordle/wordle_og_1200x630.png"
+  title="I play wordle in almost all of my classes"
+  line="Only one class tho because it is once a day"
+  link="https://www.nytimes.com/games/wordle/index.html"
+  buttonTitle="Play Worlde here">
+  </my-card>
+
+  <my-card fancy class="states"
+  image="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Blank_US_Map%2C_Mainland_with_no_States.svg/2560px-Blank_US_Map%2C_Mainland_with_no_States.svg.png" 
+  title="You have a serious gamer chair if you can get a 100% on this"
+  line="Point to all states no boarders"
+  link="https://www.sporcle.com/games/g/states" 
+  buttonTitle="Good luck bro">
+</my-card>
+  </div>
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
   <script type="module" src="./src/my-card.js"></script>
 </body>
-
 </html>
